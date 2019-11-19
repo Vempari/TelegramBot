@@ -22,7 +22,7 @@ public class Bot extends TelegramLongPollingBot {
     ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
 
     public static void main(String[] args) {
-        ApiContextInitializer.init(); // Инициализируем апи
+        ApiContextInitializer.init();
         TelegramBotsApi botapi = new TelegramBotsApi();
         try {
             botapi.registerBot(new Bot());
