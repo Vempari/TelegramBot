@@ -3,7 +3,7 @@ package ru.kozhukhovskii.lessons;
 import java.io.File;
 
 public class Lesson16 implements Lesson {
-    File method = new File("src/main/resources/Методичка 16. JUnit Part II.pdf");
+    File method = new File("src/main/resources/Book 16. JUnit Part II.pdf");
 
     @Override
     public File getPresentation() {

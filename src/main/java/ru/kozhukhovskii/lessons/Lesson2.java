@@ -3,8 +3,8 @@ package ru.kozhukhovskii.lessons;
 import java.io.File;
 
 public class Lesson2 implements Lesson {
-    File method = new File("src/main/resources/Методичка 2 Лексика Языка.Типы данных.pdf");
-    File presentation = new File("src/main/resources/Презентация 2 Лексика Языка.Типы данных.pdf");
+    File method = new File("src/main/resources/Book 2 core.Data types.pdf");
+    File presentation = new File("src/main/resources/Presentation 2 core.Data type.pdf");
 
     @Override
     public File getPresentation() {
