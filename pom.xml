@@ -20,7 +20,13 @@
             <artifactId>telegrambots</artifactId>
             <version>3.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.heroku.api</groupId>
+            <artifactId>heroku-api</artifactId>
+            <version>0.37</version>
+        </dependency>
+
     </dependencies>
 
-
 </project>
+

@@ -1,2 +1,1 @@
-javac -d bin src/main/java/ru/kozhukhovskii/Bot.java
-java -classpath ./bin bot
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.jar
