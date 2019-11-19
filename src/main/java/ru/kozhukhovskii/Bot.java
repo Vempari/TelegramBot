@@ -92,7 +92,7 @@ public class Bot extends TelegramLongPollingBot {
                 return "Выбери";
             case "Расписание":
 
-            File file = new File("https://github.com/Vempari/TelegramBot/blob/master/src/main/resources/Расписание%20занятий.pdf");
+            File file = new File("resources/Расписание занятий.pdf");
             sendDoc(message, file);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
