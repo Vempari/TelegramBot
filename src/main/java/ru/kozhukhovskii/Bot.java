@@ -13,8 +13,10 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import ru.kozhukhovskii.lessons.*;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.List;
 
 
 public class Bot extends TelegramLongPollingBot {
@@ -89,8 +91,9 @@ public class Bot extends TelegramLongPollingBot {
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Выбери";
             case "Расписание":
-                File file = new File("https://github.com/Vempari/TelegramBot/blob/master/src/main/resources/Расписание%20занятий.pdf");
-                sendDoc(message, file);
+
+            File file = searchFileByDeepness("resources", "Расписание занятий.pdf");
+            sendDoc(message, file);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
@@ -330,6 +333,44 @@ public class Bot extends TelegramLongPollingBot {
     public String getBotToken() {
         return "902774919:AAFl94BunXxpk1kxeeviwqe4WVCNgJv8znI";
         //Токен бота
+    }
+
+    public static File searchFileByDeepness(final String directoryName, final String fileName) {
+        File target = null;
+        if(directoryName != null && fileName != null) {
+            File directory = new File(directoryName);
+            if(directory.isDirectory()) {
+                File file = new File(directoryName, fileName);
+                if(file.isFile()) {
+                    target = file;
+                }
+                else {
+                    List<File> subDirectories = getSubDirectories(directory);
+                    do {
+                        List<File> subSubDirectories = new ArrayList<File>();
+                        for(File subDirectory : subDirectories) {
+                            File fileInSubDirectory = new File(subDirectory, fileName);
+                            if(fileInSubDirectory.isFile()) {
+                                return fileInSubDirectory;
+                            }
+                            subSubDirectories.addAll(getSubDirectories(subDirectory));
+                        }
+                        subDirectories = subSubDirectories;
+                    } while(subDirectories != null && ! subDirectories.isEmpty());
+                }
+            }
+        }
+        return target;
+    }
+
+    private static List<File> getSubDirectories(final File directory) {
+        File[] subDirectories = directory.listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(final File current, final String name) {
+                return new File(current, name).isDirectory();
+            }
+        });
+        return Arrays.asList(subDirectories);
     }
 
 }
