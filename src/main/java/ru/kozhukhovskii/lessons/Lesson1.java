@@ -7,7 +7,7 @@ public class Lesson1 implements Lesson {
 
     @Override
     public File getPresentation() {
-        return null;
+        return file;
     }
 
     @Override
