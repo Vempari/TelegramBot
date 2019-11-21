@@ -135,137 +135,95 @@ public class Bot extends TelegramLongPollingBot {
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 return "Выбери тему: ";
             case "1. Введение в Java.JDK, IntelliJ IDEA, Git.":
-                Lesson lesson1 = new Lesson1();
-                sendDoc(message, lesson1.getMethods());
-                sendDoc(message, lesson1.getPresentation());
+                fabric(new Lesson1(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "2. Лексика языка. Типы данных.":
-                Lesson lesson2 = new Lesson2();
-                sendDoc(message, lesson2.getMethods());
-                sendDoc(message, lesson2.getPresentation());
+                fabric(new Lesson2(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "3. Модуль компиляции и его структура. Преобразование типов.":
-                Lesson lesson3 = new Lesson3();
-                sendDoc(message, lesson3.getMethods());
-                sendDoc(message, lesson3.getPresentation());
+                fabric(new Lesson3(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "4. Массивы. Операторы и структура кода. Исключения.":
-                Lesson lesson4 = new Lesson4();
-                sendDoc(message, lesson4.getMethods());
-                sendDoc(message, lesson4.getPresentation());
+                fabric(new Lesson4(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "5. Модель памяти Java. Механизмы отражения и проксирования.":
-                Lesson lesson5 = new Lesson5();
-                sendDoc(message, lesson5.getMethods());
-                sendDoc(message, lesson5.getPresentation());
-                Lesson lesson5_2 = new Lesson5_2();
-                sendDoc(message, lesson5_2.getMethods());
-                sendDoc(message, lesson5_2.getPresentation());
+                fabric(new Lesson5(), message);
+                fabric(new Lesson5_2(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "6. Пакет java.util. Родовые типы Java(Generics).":
-                Lesson lesson6 = new Lesson6();
-                sendDoc(message, lesson6.getMethods());
-                sendDoc(message, lesson6.getPresentation());
-                Lesson lesson6_2 = new Lesson6_2();
-                sendDoc(message, lesson6_2.getMethods());
-                sendDoc(message, lesson6_2.getPresentation());
+                fabric(new Lesson6(), message);
+                fabric(new Lesson6_2(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "7. ClassLoaders.":
-                Lesson lesson7 = new Lesson7();
-                sendDoc(message, lesson7.getMethods());
-                sendDoc(message, lesson7.getPresentation());
+                fabric(new Lesson7(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "8. Введение в сетевые протоколы. Пакет java.io и работа с ресурсами.":
-                Lesson lesson8= new Lesson8();
-                sendDoc(message, lesson8.getMethods());
-                sendDoc(message, lesson8.getPresentation());
+                fabric(new Lesson8(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "9. Потоки выполнения. Синхронизация. Часть 1.":
-                Lesson lesson9 = new Lesson9();
-                sendDoc(message, lesson9.getMethods());
-                sendDoc(message, lesson9.getPresentation());
+                fabric(new Lesson9(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "10. Потоки выполнения. Синхронизация. Часть 2.":
-                Lesson lesson10 = new Lesson10();
-                sendDoc(message, lesson10.getMethods());
-                sendDoc(message, lesson10.getPresentation());
+                fabric(new Lesson10(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "11. Stream API и лямбда выражения.":
-                Lesson lesson11 = new Lesson11();
-                sendDoc(message, lesson11.getMethods());
-                sendDoc(message, lesson11.getPresentation());
+                fabric(new Lesson11(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "12. Основы Java EE. UML":
-                Lesson lesson12 = new Lesson12();
-                sendDoc(message, lesson12.getMethods());
-                sendDoc(message, lesson12.getPresentation());
+                fabric(new Lesson12(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "13. JVM, JIT, GC.":
-                Lesson lesson13 = new Lesson13();
-                sendDoc(message, lesson13.getMethods());
-                sendDoc(message, lesson13.getPresentation());
+                fabric(new Lesson13(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "14. Инструменты сборки":
-                Lesson lesson14 = new Lesson14();
-                sendDoc(message, lesson14.getMethods());
-                sendDoc(message, lesson14.getPresentation());
+                fabric(new Lesson14(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "15. Модульное тестирование на базе Junit 5. Часть 1.":
-                Lesson lesson15 = new Lesson15();
-                sendDoc(message, lesson15.getMethods());
-                sendDoc(message, lesson15.getPresentation());
+                fabric(new Lesson15(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "16. Модульное тестирование на базе Junit 5. Часть 2":
-                Lesson lesson16 = new Lesson16();
-                sendDoc(message, lesson16.getMethods());
-                sendDoc(message, lesson16.getPresentation());
+                fabric(new Lesson16(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "17. Системы контроля версий файлов":
-                Lesson lesson17 = new Lesson17();
-                sendDoc(message, lesson17.getMethods());
-                sendDoc(message, lesson17.getPresentation());
+                fabric(new Lesson17(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
             case "18. Фреймворки логирования. Системы CI и прочие инструменты":
-                Lesson lesson18 = new Lesson18();
-                sendDoc(message, lesson18.getMethods());
-                sendDoc(message, lesson18.getPresentation());
-                Lesson lesson18_2 = new Lesson18_2();
-                sendDoc(message, lesson18_2.getMethods());
-                sendDoc(message, lesson18_2.getPresentation());
+                fabric(new Lesson18(), message);
+                fabric(new Lesson18_2(), message);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 mainMenu(keyboard, leftRow, rightRow);
                 return "Прошу";
@@ -342,6 +300,13 @@ public class Bot extends TelegramLongPollingBot {
     }
     return "Не верное состояние ответа.";
     }
+
+    public void fabric(Lesson lesson, Message message) {
+        sendDoc(message, lesson.getMethods());
+        sendDoc(message, lesson.getPresentation());
+    }
+
+
 
     public void mainMenu(ArrayList<KeyboardRow> keyboard, KeyboardRow leftRow, KeyboardRow rightRow) {
         keyboard.clear();
