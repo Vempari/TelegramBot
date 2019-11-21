@@ -105,6 +105,8 @@ public class Bot extends TelegramLongPollingBot {
                 rightRow.clear();
                 thirdRow.clear();
                 fourthRow.clear();
+                fifthRow.clear();
+                sixthRow.clear();
                 leftRow.add("1. Введение в Java.JDK, IntelliJ IDEA, Git.");
                 leftRow.add("2. Лексика языка. Типы данных.");
                 leftRow.add("3. Модуль компиляции и его структура. Преобразование типов.");
@@ -128,6 +130,8 @@ public class Bot extends TelegramLongPollingBot {
                 keyboard.add(rightRow);
                 keyboard.add(thirdRow);
                 keyboard.add(fourthRow);
+                keyboard.add(fifthRow);
+                keyboard.add(sixthRow);
                 replyKeyboardMarkup.setKeyboard(keyboard);
                 return "Выбери тему: ";
             case "1. Введение в Java.JDK, IntelliJ IDEA, Git.":
