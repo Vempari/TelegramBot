@@ -234,6 +234,7 @@ public class Bot extends TelegramLongPollingBot {
                 leftRow.add("Домашнее задание 1");
                 leftRow.add("Домашнее задание 3");
                 leftRow.add("Домашнее задание 8");
+                leftRow.add("Домашнее задание 18");
                 rightRow.add("Домашнее задание 2");
                 rightRow.add("Домашнее задание 4");
                 rightRow.add("Домашнее задание 6");
@@ -297,6 +298,17 @@ public class Bot extends TelegramLongPollingBot {
                 return "Реализовать EJB бин с методом, возвращающим содержимое домашнего каталога пользователя " +
                         "(рекурсивно вглубь). Создать JSP страницу, выводящую в виде дерева результат работы EJB " +
                         "из предыдущего пункта.";
+            case "Домашнее задание 18":
+                return "Упаковать ранее сделанное ДЗ 12 в Docker контейнер (написа Dockerfile), и сконфигурировать " +
+                        "запуск контейнера с помощью docker-compose (написав docker-compose.yml). Запустить получившийся" +
+                        " контейнер, добиться его доступности из браузера.\n" +
+                        "\n" +
+                        "Полезные ссылки:\n" +
+                        "\n" +
+                        "https://docs.docker.com/engine/reference/builder/\n" +
+                        "\n" +
+                        "https://docs.docker.com/compose/compose-file/\n" +
+                        "\n"
     }
     return "Не верное состояние ответа.";
     }
