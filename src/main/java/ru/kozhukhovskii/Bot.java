@@ -308,7 +308,7 @@ public class Bot extends TelegramLongPollingBot {
                         "https://docs.docker.com/engine/reference/builder/\n" +
                         "\n" +
                         "https://docs.docker.com/compose/compose-file/\n" +
-                        "\n"
+                        "\n";
     }
     return "Не верное состояние ответа.";
     }
